@@ -1,0 +1,188 @@
+/* General styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Use a modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    /* Soft neutral background color */
+    color: #343a40;
+    /* Dark gray for text */
+}
+
+/* Container for centering content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Button styling */
+button {
+    background-color: #4caf50;
+    /* Green button for action */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    /* Rounded corners for a modern look */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+button:hover {
+    background-color: #45a049;
+    /* Slightly darker on hover */
+    transform: translateY(-2px);
+    /* Lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+header {
+    background-color: #848484;
+    /* Light blue for header */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+    /* Slightly smaller for modern design */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /* Bold and uppercase for emphasis */
+}
+
+/* Add padding to body to prevent the header from overlapping */
+body {
+    padding-top: 90px;
+}
+
+/* Grocery list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    /* Pure white for contrast */
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 10px;
+    /* Rounded corners for better UI */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.1s, box-shadow 0.3s;
+}
+
+li:hover {
+
+    /* Slight zoom on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer styling */
+footer {
+    background-color: #848484;
+    /* Dark footer for contrast */
+    color: #f2f8ff;
+    /* Light gray text */
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to body to prevent the footer from overlapping */
+body {
+    padding-bottom: 70px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Items grid styling */
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding: 15px;
+}
+
+.mainContent {
+    margin: 1.5rem;
+}
+
+.item {
+    padding-right: 20px;
+}
+
+/* Icons styling */
+svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #ff6b6b;
+    /* Light coral color */
+    transition: color 0.3s;
+}
+
+svg:hover {
+    color: skyblue;
+    /* Darker red on hover */
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #4caf50;
+    /* Match button color */
+    border-radius: 4px;
+    /* Rounded edges */
+    transition: all 0.2s;
+}
+
+/* Hover effect for checkbox */
+input[type="checkbox"]:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Checked state styling */
+input[type="checkbox"]:checked {
+    background-color: #4caf50;
+    border-color: #3e8e41;
+    /* Slightly darker green */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Focused checkbox outline */
+input[type="checkbox"]:focus {
+    outline: 2px solid #45a049;
+    /* Focus outline matches theme */
+    outline-offset: 2px;
+}
