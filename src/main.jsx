@@ -23,7 +23,7 @@ function Main() {
     <div className='mainContent'>
       <Header heading="Grocery list" />
       <App groceries={groceries} setGroceries={setGroceries} />
-      <Footer />
+      <Footer length={groceries.length} />
     </div>
   );
 }

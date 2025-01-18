@@ -9,9 +9,7 @@ function Header(props) {
 
     )
 
-    defaultprops = {
-        heading: 'Grocery List'
-    }
+
 }
 
 export default Header;  

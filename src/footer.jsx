@@ -1,7 +1,7 @@
-function Footer() {
+function Footer({ length }) {
     return (
         <footer>
-            <p>© 2021 Button Inc.</p>
+            <p>Total Items {length}</p>
         </footer>
     );
 }
