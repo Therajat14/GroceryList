@@ -19,10 +19,27 @@ function Main() {
     { id: 10, des: 'Onions', isBought: true },
   ]);
 
+  const handleCheck = (id) => {
+    console.log('handleCheck', id);
+    const grocerylist = groceries.map((grocery) => {
+      if (grocery.id === id) {
+        return { ...grocery, isBought: !grocery.isBought };
+      }
+      return grocery;
+    });
+
+    setGroceries(grocerylist)
+  }
+
+  const binHandler = (id) => {
+    const list = groceries.filter((grocery) => grocery.id !== id);
+    setGroceries(list);
+  }
+
   return (
     <div className='mainContent'>
       <Header heading="Grocery list" />
-      <App groceries={groceries} setGroceries={setGroceries} />
+      <App groceries={groceries} setGroceries={setGroceries} handleCheck={handleCheck} binHandler={binHandler} />
       <Footer length={groceries.length} />
     </div>
   );

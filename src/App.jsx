@@ -1,72 +1,22 @@
 
-import { FaTrashAlt } from "react-icons/fa";
+import List from './ULlist';
 
 
-function App(props) {
-  const groceries = props.groceries;
-  const setGroceries = props.setGroceries;
-  const handleCheck = (id) => {
-    console.log('handleCheck', id);
-    const grocerylist = groceries.map((grocery) => {
-      if (grocery.id === id) {
-        return { ...grocery, isBought: !grocery.isBought };
-      }
-      return grocery;
-    });
-
-    setGroceries(grocerylist)
+function App({ groceries, setGroceries, handleCheck, binHandler }) {
 
 
 
-  }
-
-  const binHandler = (id) => {
-    const list = groceries.filter((grocery) => grocery.id !== id);
-    setGroceries(list);
-  }
 
 
   return (
     <div>
-      {groceries.length ? ( // Check if there are items in the groceries list
-        <ul>
-          {groceries.map((grocery) => (
-            <li key={grocery.id}
-              style={{
-                color: grocery.isBought ? '#555' : 'inherit',
-                opacity: grocery.isBought ? 0.7 : 1,
-              }}
-            >
-              <div className="items">
-                <div className="item">
-                  <input
-                    type="checkbox"
-                    checked={grocery.isBought}
-                    onChange={() => handleCheck(grocery.id)}
-                  />
-                </div>
-                <div>
-                  <span
-                    onClick={() => handleCheck(grocery.id)}
-                    style={{ flexGrow: 1 }}
-                  >
-                    {grocery.des}
-                  </span>
-                </div>
-              </div>
-              <FaTrashAlt
-                onClick={() => binHandler(grocery.id)}
-                style={{
-                  color: grocery.isBought ? '#4caf50' : '#ff6b6b',
-                  opacity: grocery.isBought ? 0.85 : 1,
-                }}
-              />
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <h1>No Items in the List</h1> // Render this when the list is empty
-      )}
+      {groceries.length ? (
+        // Check if there are items in the groceries list
+        <List groceries={groceries} setGroceries={setGroceries} handleCheck={handleCheck} binHandler={binHandler} />
+      )
+        : (
+          <h1>No Items in the List</h1> // Render this when the list is empty
+        )}
     </div>
   );
 

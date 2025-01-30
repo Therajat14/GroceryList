@@ -1,13 +1,12 @@
 /* General styling */
 body {
     font-family: 'Roboto', sans-serif;
-    /* Use a modern font */
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    /* Soft neutral background color */
-    color: #343a40;
-    /* Dark gray for text */
+    background-color: #000000;
+    /* Black background */
+    color: #aeafb0;
+    /* Light gray text for readability */
 }
 
 /* Container for centering content */
@@ -19,51 +18,46 @@ body {
 
 /* Button styling */
 button {
-    background-color: #4caf50;
-    /* Green button for action */
-    color: white;
+    background-color: #1a1a1a;
+    /* Dark gray for button */
+    color: #e2f68a;
     border: none;
     padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     border-radius: 25px;
-    /* Rounded corners for a modern look */
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
     /* Subtle shadow */
 }
 
 button:hover {
-    background-color: #45a049;
-    /* Slightly darker on hover */
+    background-color: #333333;
+    /* Slightly lighter gray on hover */
     transform: translateY(-2px);
-    /* Lift effect */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.2);
 }
 
 /* Header styling */
 header {
-    background-color: #848484;
-    /* Light blue for header */
-    color: white;
+    background-color: #121212;
+    /* Dark header for black theme */
+    color: #8f2b2b;
     padding: 15px 0;
     text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
     margin: 0;
     font-size: 48px;
-    /* Slightly smaller for modern design */
     letter-spacing: 1px;
     text-transform: uppercase;
-    /* Bold and uppercase for emphasis */
 }
 
 /* Add padding to body to prevent the header from overlapping */
@@ -78,13 +72,12 @@ ul {
 }
 
 li {
-    background-color: #ffffff;
-    /* Pure white for contrast */
+    background-color: #1a1a1a;
+    /* Dark gray for list items */
     margin: 12px 0;
     padding: 15px;
     border-radius: 10px;
-    /* Rounded corners for better UI */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,24 +85,20 @@ li {
 }
 
 li:hover {
-
-    /* Slight zoom on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.15);
 }
 
 /* Footer styling */
 footer {
-    background-color: #848484;
-    /* Dark footer for contrast */
-    color: #f2f8ff;
-    /* Light gray text */
+    background-color: #121212;
+    color: #c1cbd5;
     padding: 20px 0;
     text-align: center;
     position: fixed;
     width: 100%;
     bottom: 0;
     z-index: 10;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 6px rgba(255, 255, 255, 0.1);
 }
 
 /* Add padding to body to prevent the footer from overlapping */
@@ -150,8 +139,8 @@ svg {
 }
 
 svg:hover {
-    color: skyblue;
-    /* Darker red on hover */
+    color: #4caf50;
+    /* Green on hover */
 }
 
 /* Checkbox styling */
@@ -160,29 +149,101 @@ input[type="checkbox"] {
     height: 20px;
     margin-right: 10px;
     cursor: pointer;
-    accent-color: #4caf50;
-    /* Match button color */
+    accent-color: #1a1a1a;
+
+    /* Dark checkbox color */
     border-radius: 4px;
-    /* Rounded edges */
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
     transition: all 0.2s;
 }
 
 /* Hover effect for checkbox */
 input[type="checkbox"]:hover {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
 }
 
 /* Checked state styling */
 input[type="checkbox"]:checked {
     background-color: #4caf50;
     border-color: #3e8e41;
-    /* Slightly darker green */
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
 }
 
 /* Focused checkbox outline */
 input[type="checkbox"]:focus {
     outline: 2px solid #45a049;
-    /* Focus outline matches theme */
     outline-offset: 2px;
+}
+
+
+
+
+
+
+.checkbox-wrapper-20 {
+    --slider-height: 8px;
+    --slider-width: calc(var(--slider-height) * 4);
+    --switch-height: calc(var(--slider-height) * 3);
+    --switch-width: var(--switch-height);
+    --switch-shift: var(--slider-height);
+    --transition: all 0.2s ease;
+
+    --switch-on-color: #ef0460;
+    --slider-on-color: #fc5d9b;
+
+    --switch-off-color: #eeeeee;
+    --slider-off-color: #c5c5c5;
+}
+
+.checkbox-wrapper-20 .switch {
+    display: block;
+}
+
+.checkbox-wrapper-20 .switch .slider {
+    position: relative;
+    display: inline-block;
+    height: var(--slider-height);
+    width: var(--slider-width);
+    border-radius: var(--slider-height);
+    cursor: pointer;
+    background: var(--slider-off-color);
+    transition: var(--transition);
+}
+
+.checkbox-wrapper-20 .switch .slider:after {
+    background: var(--switch-off-color);
+    position: absolute;
+    left: calc(-1 * var(--switch-shift));
+    top: calc((var(--slider-height) - var(--switch-height)) / 2);
+    display: block;
+    width: var(--switch-height);
+    height: var(--switch-width);
+    border-radius: 50%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .2);
+    content: '';
+    transition: var(--transition);
+}
+
+.checkbox-wrapper-20 .switch label {
+    margin-right: 7px;
+}
+
+.checkbox-wrapper-20 .switch .input {
+    display: none;
+}
+
+.checkbox-wrapper-20 .switch .input~.label {
+    margin-left: var(--slider-height);
+}
+
+.checkbox-wrapper-20 .switch .input:checked~.slider:after {
+    left: calc(var(--slider-width) - var(--switch-width) + var(--switch-shift));
+}
+
+.checkbox-wrapper-20 .switch .input:checked~.slider {
+    background: var(--slider-on-color);
+}
+
+.checkbox-wrapper-20 .switch .input:checked~.slider:after {
+    background: var(--switch-on-color);
 }
