@@ -3,9 +3,9 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000;
-    /* Black background */
-    color: #aeafb0;
+    background-color: #121212;
+    /* Dark background */
+    color: #b0b0b0;
     /* Light gray text for readability */
 }
 
@@ -18,9 +18,9 @@ body {
 
 /* Button styling */
 button {
-    background-color: #1a1a1a;
+    background-color: #1f1f1f;
     /* Dark gray for button */
-    color: #e2f68a;
+    color: #b0b0b0;
     border: none;
     padding: 12px 24px;
     font-size: 16px;
@@ -28,29 +28,47 @@ button {
     cursor: pointer;
     border-radius: 25px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
 }
 
-button:hover {
-    background-color: #333333;
-    /* Slightly lighter gray on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.2);
+.addItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addItem input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+    background-color: #1f1f1f;
+    color: #b0b0b0;
+}
+
+.addItem button {
+    background-color: #2a2a2a;
+    color: #b0b0b0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Header styling */
 header {
-    background-color: #121212;
+    background-color: #1a1a1a;
     /* Dark header for black theme */
-    color: #8f2b2b;
+    color: #b0b0b0;
     padding: 15px 0;
     text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -72,12 +90,12 @@ ul {
 }
 
 li {
-    background-color: #1a1a1a;
+    background-color: #1f1f1f;
     /* Dark gray for list items */
     margin: 12px 0;
-    padding: 15px;
+    padding: 2px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,20 +103,20 @@ li {
 }
 
 li:hover {
-    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer styling */
 footer {
-    background-color: #121212;
-    color: #c1cbd5;
+    background-color: #1a1a1a;
+    color: #b0b0b0;
     padding: 20px 0;
     text-align: center;
     position: fixed;
     width: 100%;
     bottom: 0;
     z-index: 10;
-    box-shadow: 0 -4px 6px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Add padding to body to prevent the footer from overlapping */
@@ -133,14 +151,14 @@ svg {
     width: 24px;
     height: 24px;
     margin-right: 10px;
-    color: #ff6b6b;
-    /* Light coral color */
+    color: #b0b0b0;
+    /* Light gray color */
     transition: color 0.3s;
 }
 
 svg:hover {
-    color: #4caf50;
-    /* Green on hover */
+    color: #8f8f8f;
+    /* Slightly lighter gray on hover */
 }
 
 /* Checkbox styling */
@@ -149,37 +167,32 @@ input[type="checkbox"] {
     height: 20px;
     margin-right: 10px;
     cursor: pointer;
-    accent-color: #1a1a1a;
-
+    accent-color: #1f1f1f;
     /* Dark checkbox color */
     border-radius: 4px;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     transition: all 0.2s;
 }
 
 /* Hover effect for checkbox */
 input[type="checkbox"]:hover {
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Checked state styling */
 input[type="checkbox"]:checked {
-    background-color: #4caf50;
-    border-color: #3e8e41;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    background-color: #2a2a2a;
+    border-color: #2a2a2a;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Focused checkbox outline */
 input[type="checkbox"]:focus {
-    outline: 2px solid #45a049;
+    outline: 2px solid #2a2a2a;
     outline-offset: 2px;
 }
 
-
-
-
-
-
+/* Switch styling */
 .checkbox-wrapper-20 {
     --slider-height: 8px;
     --slider-width: calc(var(--slider-height) * 4);
@@ -188,11 +201,11 @@ input[type="checkbox"]:focus {
     --switch-shift: var(--slider-height);
     --transition: all 0.2s ease;
 
-    --switch-on-color: #ef0460;
-    --slider-on-color: #fc5d9b;
+    --switch-on-color: #2a2a2a;
+    --slider-on-color: #3a3a3a;
 
-    --switch-off-color: #eeeeee;
-    --slider-off-color: #c5c5c5;
+    --switch-off-color: #1f1f1f;
+    --slider-off-color: #2a2a2a;
 }
 
 .checkbox-wrapper-20 .switch {

@@ -3,9 +3,12 @@ import App from './App.jsx';
 import Header from './header.jsx';
 import Footer from './footer.jsx';
 import { useState } from 'react';
+import AddItem from './additem.jsx';
+import { set } from 'mongoose';
+
 
 function Main() {
-
+  console.log('Main component');
   const [groceries, setGroceries] = useState([
     { id: 1, des: 'Milk', isBought: false },
     { id: 2, des: 'Bread', isBought: false },
@@ -18,6 +21,13 @@ function Main() {
     { id: 9, des: 'Butter', isBought: false },
     { id: 10, des: 'Onions', isBought: true },
   ]);
+
+
+  const [newItem, setNewItem] = useState('');
+  const addItem = (e) => {
+    setNewItem(...e.target.innerText);
+
+  }
 
   const handleCheck = (id) => {
     console.log('handleCheck', id);
@@ -36,11 +46,16 @@ function Main() {
     setGroceries(list);
   }
 
+
+
   return (
     <div className='mainContent'>
       <Header heading="Grocery list" />
+      <AddItem newItem={newItem} setNewItem={setNewItem} addItem={addItem} />
+      <App groceries={groceries} setGroceries={setGroceries} handleCheck={handleCheck} binHandler={binHandler} />
       <App groceries={groceries} setGroceries={setGroceries} handleCheck={handleCheck} binHandler={binHandler} />
       <Footer length={groceries.length} />
+
     </div>
   );
 }
@@ -49,4 +64,5 @@ createRoot(document.getElementById('root')).render(
 
 
   <Main />
+
 )
