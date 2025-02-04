@@ -23,7 +23,7 @@ const ListItem = ({ grocery, handleCheck, binHandler }) => {
                         onClick={() => handleCheck(grocery.id)}
                         style={{ flexGrow: 1 }}
                     >
-                        {grocery.des}
+                        {grocery.id + " :"}  {grocery.des}
                     </span>
                 </div>
             </div>

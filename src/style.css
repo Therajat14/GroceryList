@@ -14,6 +14,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+
 }
 
 /* Button styling */
@@ -30,6 +31,30 @@ button {
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
+
+}
+
+.search {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0 12px 0;
+    padding: 2px;
+}
+
+.search .searchLabel {
+    display: none;
+}
+
+.search .searchInput {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #1f1f1f;
+    color: #b0b0b0;
 }
 
 .addItem {
@@ -58,7 +83,7 @@ button {
 }
 
 /* Header styling */
-header {
+.header {
     background-color: #1a1a1a;
     /* Dark header for black theme */
     color: #b0b0b0;
@@ -69,13 +94,18 @@ header {
     width: 100%;
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-right: 1rem;
+
+
 }
 
 header h1 {
     margin: 0;
-    font-size: 48px;
+    font-size: 1.5rem;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin: 20px;
 }
 
 /* Add padding to body to prevent the header from overlapping */

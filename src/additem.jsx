@@ -1,10 +1,10 @@
 import { FaPlus } from "react-icons/fa";
-const AddItem = ({ newItem, setNewItem, addItem }) => {
+const AddItem = ({ newItem, setNewItem, handelSubmit }) => {
 
     return (
         <form
             className='addItem1'
-            onSubmit={(event) => event.preventDefault()}
+            onSubmit={handelSubmit}
             required >
             <label htmlFor="addItem1" className="addItem">
                 <input
@@ -14,7 +14,7 @@ const AddItem = ({ newItem, setNewItem, addItem }) => {
                     onChange={(e) => setNewItem(e.target.value)}
                     required
                 />
-                <button onClick={addItem}><FaPlus /></button>
+                <button type="submit"><FaPlus /></button>
             </label>
         </form>
 

@@ -4,28 +4,37 @@ import Header from './header.jsx';
 import Footer from './footer.jsx';
 import { useState } from 'react';
 import AddItem from './additem.jsx';
-import { set } from 'mongoose';
+import SearchBar from './searchBar.jsx';
+import { use } from 'react';
 
 
 function Main() {
   console.log('Main component');
+
+
   const [groceries, setGroceries] = useState([
     { id: 1, des: 'Milk', isBought: false },
     { id: 2, des: 'Bread', isBought: false },
     { id: 3, des: 'Eggs', isBought: false },
     { id: 4, des: 'Rice', isBought: false },
-    { id: 5, des: 'Bananas', isBought: true },
-    { id: 6, des: 'Tomatoes', isBought: false },
-    { id: 7, des: 'Potatoes', isBought: false },
-    { id: 8, des: 'Cheese', isBought: false },
-    { id: 9, des: 'Butter', isBought: false },
-    { id: 10, des: 'Onions', isBought: true },
+
   ]);
 
+  const [search, setSearch] = useState('')
 
   const [newItem, setNewItem] = useState('');
-  const addItem = (e) => {
-    setNewItem(...e.target.innerText);
+
+  const addItem = (item) => {
+    const id = groceries.length ? groceries[groceries.length - 1].id + 1 : 1;
+    const newGrocery = {
+      id: id,
+      des: newItem,
+      isBought: false
+    }
+    console.log(id);
+    console.log(newGrocery);
+    setGroceries([...groceries, newGrocery])
+    console.log(groceries)
 
   }
 
@@ -46,13 +55,19 @@ function Main() {
     setGroceries(list);
   }
 
-
+  const handelSubmit = (e) => {
+    e.preventDefault()
+    if (AddItem === '') return;
+    console.log("Submitted")
+    setNewItem('');
+    addItem("hii");
+  }
 
   return (
     <div className='mainContent'>
       <Header heading="Grocery list" />
-      <AddItem newItem={newItem} setNewItem={setNewItem} addItem={addItem} />
-      <App groceries={groceries} setGroceries={setGroceries} handleCheck={handleCheck} binHandler={binHandler} />
+      <AddItem newItem={newItem} setNewItem={setNewItem} handelSubmit={handelSubmit} />
+      <SearchBar search={search} setSearch={setSearch} />
       <App groceries={groceries} setGroceries={setGroceries} handleCheck={handleCheck} binHandler={binHandler} />
       <Footer length={groceries.length} />
 
