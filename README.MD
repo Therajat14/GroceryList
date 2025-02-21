@@ -2,6 +2,12 @@
 
 This is a full-stack web application for managing a grocery list. Users can add, edit, and delete items from their grocery list.
 
+
+A full-stack grocery list management app built with React.  
+
+[![Open Project](https://img.shields.io/badge/Open-Project-blue?style=for-the-badge)](https://grocery-list-full-stack-git-frontend-therajat14s-projects.vercel.app/)
+
+
 ## Features
 
 - Add new grocery items
