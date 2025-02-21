@@ -13,7 +13,19 @@ function Main() {
 
   const API_URL = "http://localhost:3500/items";
 
-  const [groceries, setGroceries] = useState([]);
+  const [groceries, setGroceries] = useState([
+    { id: 1, des: "Milk", isBought: false },
+    { id: 2, des: "Bread", isBought: true },
+    { id: 3, des: "Oats", isBought: false },
+    { id: 4, des: "Rice", isBought: false },
+    { id: 5, des: "Apples", isBought: true },
+    { id: 6, des: "Tomatoes", isBought: false },
+    { id: 7, des: "Potatoes", isBought: false },
+    { id: 8, des: "Onions", isBought: true },
+    { id: 9, des: "Peanut Butter", isBought: false },
+    { id: 10, des: "Cheese", isBought: true }
+  ]);
+
   const [search, setSearch] = useState('');
   const [newItem, setNewItem] = useState('');
   const [fetchErr, setFetchErr] = useState(null);
@@ -31,7 +43,7 @@ function Main() {
       }
       catch (err) {
         console.error(err.message);
-        setFetchErr(err.message);
+        setFetchErr(null);
       }
       finally {
         setIsLoading(false);
