@@ -50,3 +50,7 @@ Contributions are welcome! Please open an issue or submit a pull request.
 ## License
 
 This project is licensed under the MIT License. 
+
+## Acknowledgements
+
+This code is completed by my side.
