@@ -1,0 +1,292 @@
+/* General styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    /* Dark background */
+    color: #b0b0b0;
+    /* Light gray text for readability */
+}
+
+/* Container for centering content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+/* Button styling */
+button {
+    background-color: #1f1f1f;
+    /* Dark gray for button */
+    color: #b0b0b0;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+
+}
+
+.search {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0 12px 0;
+    padding: 2px;
+}
+
+.search .searchLabel {
+    display: none;
+}
+
+.search .searchInput {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #1f1f1f;
+    color: #b0b0b0;
+}
+
+.addItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addItem input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+    background-color: #1f1f1f;
+    color: #b0b0b0;
+}
+
+.addItem button {
+    background-color: #2a2a2a;
+    color: #b0b0b0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Header styling */
+.header {
+    background-color: #1a1a1a;
+    /* Dark header for black theme */
+    color: #b0b0b0;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-right: 1rem;
+
+
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+/* Add padding to body to prevent the header from overlapping */
+body {
+    padding-top: 90px;
+}
+
+/* Grocery list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #1f1f1f;
+    /* Dark gray for list items */
+    margin: 12px 0;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.1s, box-shadow 0.3s;
+}
+
+li:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer styling */
+footer {
+    background-color: #1a1a1a;
+    color: #b0b0b0;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to body to prevent the footer from overlapping */
+body {
+    padding-bottom: 70px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Items grid styling */
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding: 15px;
+}
+
+.mainContent {
+    margin: 1.5rem;
+}
+
+.item {
+    padding-right: 20px;
+}
+
+/* Icons styling */
+svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #b0b0b0;
+    /* Light gray color */
+    transition: color 0.3s;
+}
+
+svg:hover {
+    color: #8f8f8f;
+    /* Slightly lighter gray on hover */
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #1f1f1f;
+    /* Dark checkbox color */
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+/* Hover effect for checkbox */
+input[type="checkbox"]:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Checked state styling */
+input[type="checkbox"]:checked {
+    background-color: #2a2a2a;
+    border-color: #2a2a2a;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Focused checkbox outline */
+input[type="checkbox"]:focus {
+    outline: 2px solid #2a2a2a;
+    outline-offset: 2px;
+}
+
+/* Switch styling */
+.checkbox-wrapper-20 {
+    --slider-height: 8px;
+    --slider-width: calc(var(--slider-height) * 4);
+    --switch-height: calc(var(--slider-height) * 3);
+    --switch-width: var(--switch-height);
+    --switch-shift: var(--slider-height);
+    --transition: all 0.2s ease;
+
+    --switch-on-color: #2a2a2a;
+    --slider-on-color: #3a3a3a;
+
+    --switch-off-color: #1f1f1f;
+    --slider-off-color: #2a2a2a;
+}
+
+.checkbox-wrapper-20 .switch {
+    display: block;
+}
+
+.checkbox-wrapper-20 .switch .slider {
+    position: relative;
+    display: inline-block;
+    height: var(--slider-height);
+    width: var(--slider-width);
+    border-radius: var(--slider-height);
+    cursor: pointer;
+    background: var(--slider-off-color);
+    transition: var(--transition);
+}
+
+.checkbox-wrapper-20 .switch .slider:after {
+    background: var(--switch-off-color);
+    position: absolute;
+    left: calc(-1 * var(--switch-shift));
+    top: calc((var(--slider-height) - var(--switch-height)) / 2);
+    display: block;
+    width: var(--switch-height);
+    height: var(--switch-width);
+    border-radius: 50%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .2);
+    content: '';
+    transition: var(--transition);
+}
+
+.checkbox-wrapper-20 .switch label {
+    margin-right: 7px;
+}
+
+.checkbox-wrapper-20 .switch .input {
+    display: none;
+}
+
+.checkbox-wrapper-20 .switch .input~.label {
+    margin-left: var(--slider-height);
+}
+
+.checkbox-wrapper-20 .switch .input:checked~.slider:after {
+    left: calc(var(--slider-width) - var(--switch-width) + var(--switch-shift));
+}
+
+.checkbox-wrapper-20 .switch .input:checked~.slider {
+    background: var(--slider-on-color);
+}
+
+.checkbox-wrapper-20 .switch .input:checked~.slider:after {
+    background: var(--switch-on-color);
+}
