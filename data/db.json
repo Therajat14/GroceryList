@@ -2,37 +2,42 @@
   "items": [
     {
       "id": 1,
-      "des": "HTML",
+      "des": "Apple ",
       "isBought": false
     },
     {
       "id": 2,
-      "des": "CSS",
+      "des": "Banana",
       "isBought": false
     },
     {
       "id": 3,
-      "des": "JS",
+      "des": "Eggs",
       "isBought": false
     },
     {
       "id": 4,
-      "des": "REACT",
+      "des": "Oats",
       "isBought": false
     },
     {
       "id": 5,
-      "des": "NODE",
+      "des": "Pumkin",
       "isBought": false
     },
     {
       "id": 6,
-      "des": "MONGO DB",
+      "des": "Salad",
       "isBought": false
     },
     {
       "id": 7,
-      "des": "EXPRESS",
+      "des": "Vaggies",
+      "isBought": false
+    },
+    {
+      "id": 8,
+      "des": "etc",
       "isBought": false
     }
   ]
